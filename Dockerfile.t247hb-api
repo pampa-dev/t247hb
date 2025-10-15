@@ -1,0 +1,7 @@
+# Custom API image that bakes in local bots code/configs
+FROM hummingbot/hummingbot-api:latest
+
+# Copy bots into the expected path in the base image
+COPY bots /hummingbot-api/bots
+
+# Inherit CMD/ENTRYPOINT from base image

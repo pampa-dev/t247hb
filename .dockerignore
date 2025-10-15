@@ -1,0 +1,14 @@
+.git
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.Python
+**/env/
+**/venv/
+**/.venv/
+**/.mypy_cache/
+**/.pytest_cache/
+**/.DS_Store
+bots/**/data/
+bots/**/logs/
