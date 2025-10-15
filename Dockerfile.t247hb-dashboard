@@ -1,0 +1,8 @@
+# Custom dashboard image that bakes in local pages and credentials
+FROM hummingbot/dashboard:latest
+
+# Copy custom Streamlit pages and optional credentials
+COPY pages /home/dashboard/frontend/pages
+COPY credentials.yml /home/dashboard/credentials.yml
+
+# Inherit CMD/ENTRYPOINT from base image

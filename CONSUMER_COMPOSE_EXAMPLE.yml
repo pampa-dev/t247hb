@@ -1,0 +1,18 @@
+# Example docker-compose.yml for a consumer project using the t247hb microservice
+services:
+  t247hb:
+    image: pampadev/t247hb-stack-launcher:2025-10-15
+    container_name: t247hb
+    environment:
+      USERNAME: admin
+      PASSWORD: abc
+      # Optionally override baked app images later
+      # DASHBOARD_IMAGE: pampadev/t247hb-dashboard:2025-11-01
+      # API_IMAGE: pampadev/t247hb-api:2025-11-01
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Optionally pass API env variables to inner API service
+      # - ./api.env:/config/api.env:ro
+# Result:
+# - Dashboard: http://localhost:8501
+# - API:       http://localhost:8000
