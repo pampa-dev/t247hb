@@ -1,6 +1,5 @@
 services:
   dashboard:
-    profiles: [dev]
     image: ${DASHBOARD_IMAGE}
     ports:
       - "8501:8501"

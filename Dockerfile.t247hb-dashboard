@@ -1,5 +1,5 @@
 # Custom dashboard image that bakes in local pages and credentials
-FROM hummingbot/dashboard:latest
+FROM hummingbot/dashboard@sha256:fd28cc85ec0e8014a2cc7cf246acc932a41727dd4e6b5262d19c29a82400d80a
 
 # Copy custom Streamlit pages and optional credentials
 COPY pages /home/dashboard/frontend/pages

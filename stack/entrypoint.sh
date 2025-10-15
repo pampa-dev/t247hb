@@ -4,10 +4,8 @@ set -euo pipefail
 # Compute today's date tag (YYYY-MM-DD) if not provided
 TODAY_TAG=$(date +%F)
 
-# Default images (overridable via env). Use today's date tag by default, with optional suffix.
-TAG_SUFFIX=${TAG_SUFFIX:-}
-export DASHBOARD_IMAGE=${DASHBOARD_IMAGE:-pampadev/t247hb-dashboard:${TODAY_TAG}${TAG_SUFFIX}}
-export API_IMAGE=${API_IMAGE:-pampadev/t247hb-api:${TODAY_TAG}${TAG_SUFFIX}}
+export DASHBOARD_IMAGE=${DASHBOARD_IMAGE:-pampadev/t247hb-dashboard:${TODAY_TAG}}
+export API_IMAGE=${API_IMAGE:-pampadev/t247hb-api:${TODAY_TAG}}
 
 # If a file is mounted at /config/api.env, use it for the inner API service
 if [[ -f "/config/api.env" ]]; then

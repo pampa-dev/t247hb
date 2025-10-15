@@ -1,5 +1,5 @@
 # Custom API image that bakes in local bots code/configs
-FROM hummingbot/hummingbot-api:latest
+FROM hummingbot/hummingbot-api@sha256:1dc01734828484ecfc8573db44564c6775c731dc488435f2113e7ffe44c62454
 
 # Copy bots into the expected path in the base image
 COPY bots /hummingbot-api/bots

@@ -20,10 +20,10 @@ all: build
 build: build-dashboard build-api build-launcher
 
 build-dashboard:
-	docker build -f Dockerfile.t247hb-dashboard -t $(REGISTRY)/t247hb-dashboard:$(TAG_WITH_SUFFIX) .
+	docker build -f Dockerfile.t247hb-dashboard -t $(REGISTRY)/t247hb-dashboard:$(TAG) .
 
 build-api:
-	docker build -f Dockerfile.t247hb-api -t $(REGISTRY)/t247hb-api:$(TAG_WITH_SUFFIX) .
+	docker build -f Dockerfile.t247hb-api -t $(REGISTRY)/t247hb-api:$(TAG) .
 
 build-launcher:
 	docker build -f stack/Dockerfile -t $(REGISTRY)/t247hb-stack-launcher:$(TAG_WITH_SUFFIX) stack
@@ -31,10 +31,10 @@ build-launcher:
 push: push-dashboard push-api push-launcher
 
 push-dashboard:
-	docker push $(REGISTRY)/t247hb-dashboard:$(TAG_WITH_SUFFIX)
+	docker push $(REGISTRY)/t247hb-dashboard:$(TAG)
 
 push-api:
-	docker push $(REGISTRY)/t247hb-api:$(TAG_WITH_SUFFIX)
+	docker push $(REGISTRY)/t247hb-api:$(TAG)
 
 push-launcher:
 	docker push $(REGISTRY)/t247hb-stack-launcher:$(TAG_WITH_SUFFIX)
