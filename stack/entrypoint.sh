@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Compute today's date tag (YYYY-MM-DD) if not provided
-TODAY_TAG=$(date +%F)
+TAG="2025-10-15"
 
-export DASHBOARD_IMAGE=${DASHBOARD_IMAGE:-pampadev/t247hb-dashboard:${TODAY_TAG}}
-export API_IMAGE=${API_IMAGE:-pampadev/t247hb-api:${TODAY_TAG}}
+export DASHBOARD_IMAGE=${DASHBOARD_IMAGE:-pampadev/t247hb-dashboard:${TAG}}
+export API_IMAGE=${API_IMAGE:-pampadev/t247hb-api:${TAG}}
 
 # If a file is mounted at /config/api.env, use it for the inner API service
 if [[ -f "/config/api.env" ]]; then
